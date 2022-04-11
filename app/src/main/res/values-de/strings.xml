@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="start_calculator_activity">Polygonflächenrechner</string>
+    <string-array name="langs">
+        <item>Englisch</item>
+        <item>Kroatisch</item>
+        <item>Deutsch</item>
+    </string-array>
+    <string name="calculate_area">berechen</string>
+    <string name="poly_msg_1">"Vieleck mit "</string>
+    <string name="poly_msg_2">" Seiten"</string>
+    <string name="poly_msg_3">"Fläche = "</string>
+    <string name="poly_msg_4">" Einheiten"</string>
+    <string name="toggle_dark_mode">dunkler Modus?</string>
+</resources>

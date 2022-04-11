@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="start_calculator_activity">kalkulator površine poligona</string>
+    <string-array name="langs">
+        <item>Engleski</item>
+        <item>Hrvatski</item>
+        <item>Njemački</item>
+    </string-array>
+    <string name="calculate_area">izračunaj</string>
+    <string name="poly_msg_1">"Poligon s "</string>
+    <string name="poly_msg_2">" stranice"</string>
+    <string name="poly_msg_3">"Površina = "</string>
+    <string name="poly_msg_4">" jedinica"</string>
+    <string name="toggle_dark_mode">Tamna tema?</string>
+</resources>

@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name" translatable="false">KalkulatorCizmic</string>
+    <string name="app_package" translatable="false">hr.cizmic.kalkulatorcizmic</string>
+    <string name="start_calculator_activity">Polygon Area Calculator</string>
+    <string name="checkmark" translatable="false">✓</string>
+    <string name="reload_language" translatable="false">↻</string>
+    <string name="remove_item" translatable="false">✕</string>
+    <string name="calculate_area">calculate</string>
+    <string name="poly_msg_1">Polygon with </string>
+    <string name="poly_msg_2"> sides</string>
+    <string name="poly_msg_3">Area = "</string>
+    <string name="poly_msg_4"> units"</string>
+    <string name="toggle_dark_mode">Toggle dark mode?</string>
+    <string-array name="langs">
+        <item>English</item>
+        <item>Croatian</item>
+        <item>German</item>
+    </string-array>
+</resources>
