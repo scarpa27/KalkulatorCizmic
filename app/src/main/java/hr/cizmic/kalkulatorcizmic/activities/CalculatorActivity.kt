@@ -1,7 +1,10 @@
 package hr.cizmic.kalkulatorcizmic.activities
 
+import android.content.Context
 import android.os.Bundle
+import android.util.Log
 import android.view.View
+import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -35,13 +38,13 @@ class CalculatorActivity : AppCompatActivity() {
             val x: EditText = view.findViewById(R.id.coord_x)
             val y: EditText = view.findViewById(R.id.coord_y)
 
-            var cond_x: Boolean = false
-            var cond_y: Boolean = false
+            var condX: Boolean = false
+            var condY: Boolean = false
 
             x.addTextChangedListener {
                 if (i < max_vertices - 1) {
-                    cond_x = !it.isNullOrEmpty()
-                    if (cond_x and cond_y)
+                    condX = !it.isNullOrEmpty()
+                    if (condX and condY)
                         binding.verticesList.getChildAt(i + 1).visibility = View.VISIBLE
                     else
                         binding.verticesList.getChildAt(i + 1).visibility = View.GONE
@@ -50,8 +53,8 @@ class CalculatorActivity : AppCompatActivity() {
 
             y.addTextChangedListener {
                 if (i < max_vertices - 1) {
-                    cond_y = !it.isNullOrEmpty()
-                    if (cond_x and cond_y)
+                    condY = !it.isNullOrEmpty()
+                    if (condX and condY)
                         binding.verticesList.getChildAt(i + 1).visibility = View.VISIBLE
                     else
                         binding.verticesList.getChildAt(i + 1).visibility = View.GONE
@@ -70,10 +73,21 @@ class CalculatorActivity : AppCompatActivity() {
                     newVertices.add(Vertex(x.text.toString().toDouble(), y.text.toString().toDouble()))
                 }
             }
+
             val polygon = Polygon(newVertices)
             val area = polygon.area()
+            binding.draw.setPath(polygon)
             Toast.makeText(this, getString(R.string.poly_msg_1)+newVertices.size+getString(R.string.poly_msg_2)+"\n"+getString(
-                R.string.poly_msg_3)+area.toString()+getString(R.string.poly_msg_4), Toast.LENGTH_LONG).show()
+                R.string.poly_msg_3)+String.format("%.3f", area)+getString(R.string.poly_msg_4), Toast.LENGTH_LONG).show()
+
+            val inputManager: InputMethodManager =
+                getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+
+            inputManager.hideSoftInputFromWindow(
+                currentFocus!!.windowToken,
+                InputMethodManager.HIDE_NOT_ALWAYS
+            )
+
         }
     }
 }

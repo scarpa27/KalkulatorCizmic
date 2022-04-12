@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name" translatable="false">KalkulatorCizmic</string>
+    <string name="app_name" translatable="false">Kalkulator Cizmic</string>
     <string name="app_package" translatable="false">hr.cizmic.kalkulatorcizmic</string>
     <string name="start_calculator_activity">Polygon Area Calculator</string>
     <string name="checkmark" translatable="false">✓</string>
