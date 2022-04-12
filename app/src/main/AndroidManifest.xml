@@ -6,7 +6,7 @@
         android:name=".activities.ApplicationKalkulator"
         android:allowBackup="true"
         android:configChanges="locale|orientation"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/ic_polygon"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
